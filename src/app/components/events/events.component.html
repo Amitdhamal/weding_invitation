@@ -1,0 +1,12 @@
+<app-section-title>सोहळ्याचे क्षण</app-section-title>
+<ol>
+  @for (e of w.events; track e.en) {
+    <li>
+      <div class="card">
+        <h3>{{ e.name }}</h3>
+        <small>{{ e.en }}</small>
+        <p>{{ e.when }}</p>
+      </div>
+    </li>
+  }
+</ol>

@@ -1,0 +1,31 @@
+:host {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 4;
+  perspective: 700px;
+}
+
+img {
+  position: absolute;
+  top: -50px;
+  height: auto;
+  opacity: .92;
+  animation: 1s linear infinite;
+  will-change: transform;
+}
+
+.v1 {
+  filter: hue-rotate(-14deg) brightness(1.08);
+}
+
+.v2 {
+  filter: saturate(.6) brightness(1.22) blur(.7px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :host {
+    display: none;
+  }
+}

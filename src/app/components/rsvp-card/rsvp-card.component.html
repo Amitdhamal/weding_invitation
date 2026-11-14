@@ -1,0 +1,15 @@
+<p class="label">✉️ उपस्थिती (RSVP)</p>
+<h3>कृपया उपस्थिती कळवा</h3>
+<ol>
+  <li>QR कोड मोबाईलने स्कॅन करा, किंवा खालील "WhatsApp वर कळवा" बटण दाबा.</li>
+  <li>WhatsApp उघडेल.</li>
+  <li>“Send” दाबा. उपस्थिती थेट आयोजकांपर्यंत पोहोचेल.</li>
+</ol>
+<figure>
+  <img [src]="qr()" alt="RSVP QR code">
+  <figcaption>स्कॅन करा आणि उपस्थिती कळवा</figcaption>
+</figure>
+<div class="btns">
+  <a [href]="rsvpUrl" target="_blank" rel="noopener">WhatsApp वर कळवा</a>
+  <button type="button" class="alt" (click)="share()">आमंत्रण शेअर करा</button>
+</div>

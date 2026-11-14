@@ -1,0 +1,12 @@
+<section aria-label="लग्नाला उरलेला वेळ">
+  <h2>लग्नाला उरलेला वेळ</h2>
+  <div role="timer">
+    @if (over()) {
+      <b>शुभ विवाह संपन्न! 🎉</b>
+    } @else {
+      @for (t of tiles(); track t.l) {
+        <span><b>{{ t.v }}</b> {{ t.l }}</span>
+      }
+    }
+  </div>
+</section>

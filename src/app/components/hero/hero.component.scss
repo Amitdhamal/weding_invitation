@@ -1,0 +1,152 @@
+:host {
+  display: block;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to top, #5a0c14ee 6%, #c85a0640 70%), var(--hero, none), linear-gradient(135deg, var(--saffron), var(--maroon));
+  background-size: cover;
+  background-position: center;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 28px;
+  z-index: 1;
+  background: radial-gradient(circle at 14px 10px, #FFD27A 8px, transparent 9px) 0 0/28px 28px, radial-gradient(circle at 0 20px, #2F6B3A 6px, transparent 7px) 0 0/28px 28px;
+}
+
+.in {
+  padding: 110px 24px 80px;
+  max-width: 760px;
+  position: relative;
+  z-index: 1;
+}
+
+.sym {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.invitation-title {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding: 6px 18px;
+  border: 1px solid #FFD27A;
+  border-radius: 999px;
+  color: #FFD27A;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.sym app-sacred {
+  color: #FFD27A;
+}
+
+.sym .om {
+  font-size: 3.6rem;
+}
+
+.shloka {
+  color: #FFD27A;
+}
+
+h1 {
+  font-size: clamp(3rem, 13vw, 6.2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+small {
+  display: block;
+  font: 600 1rem/1.5 'Hind', sans-serif;
+  color: #FFD27A;
+}
+
+.amp {
+  font-size: .36em;
+  color: #FFD27A;
+  margin: 6px 0;
+}
+
+.sub {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.when {
+  margin-top: 14px;
+  display: inline-block;
+  border: 1px solid #FFD27A;
+  color: #FFD27A;
+  padding: 2px 16px;
+  border-radius: 999px;
+}
+
+.ft {
+  position: absolute;
+  bottom: -12px;
+  width: clamp(130px, 28vw, 250px);
+  z-index: 0;
+  pointer-events: none;
+  filter: brightness(1.5) saturate(1.1) drop-shadow(0 0 10px #ffd27a88);
+  transform-origin: bottom center;
+  animation: feather-float-left 5s ease-in-out infinite;
+}
+
+.fl {
+  left: -1%;
+}
+
+.fr {
+  right: -1%;
+  transform: scaleX(-1);
+  animation-name: feather-float-right;
+  animation-delay: -2.5s;
+}
+
+@keyframes feather-float-left {
+  0%,
+  100% {
+    translate: 0 0;
+    rotate: 0deg;
+  }
+
+  50% {
+    translate: -10px -14px;
+    rotate: -3deg;
+  }
+}
+
+@keyframes feather-float-right {
+  0%,
+  100% {
+    translate: 0 0;
+    rotate: 0deg;
+  }
+
+  50% {
+    translate: 10px -14px;
+    rotate: 3deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ft {
+    animation: none;
+  }
+}

@@ -1,0 +1,4 @@
+@for (q of petals; track $index; let i = $index) {
+  <img src="assets/petal.svg" alt="" aria-hidden="true" [class]="'v' + q.v" [style.left.%]="q.left" [style.width.px]="q.size"
+    [style.animation-name]="i % 2 ? 'fall2' : 'fall'" [style.animation-delay.s]="q.delay" [style.animation-duration.s]="q.dur">
+}

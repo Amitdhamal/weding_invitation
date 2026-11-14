@@ -1,0 +1,11 @@
+<p class="label">📍 स्थळ</p>
+<h3>{{ w.venue }}</h3>
+<p>{{ w.address }}</p>
+<figure>
+  <img [src]="qr()" alt="Venue map QR code">
+  <figcaption>स्कॅन करा आणि मार्ग पाहा</figcaption>
+</figure>
+<div class="btns">
+  <a [href]="w.mapLink" target="_blank" rel="noopener">नकाशा उघडा</a>
+  <a class="alt" [href]="calUrl" target="_blank" rel="noopener">Google कॅलेंडरमध्ये जोडा</a>
+</div>

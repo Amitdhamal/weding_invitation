@@ -1,0 +1,51 @@
+:host {
+  display: block;
+  text-align: center;
+  padding: 48px 20px 40px;
+}
+
+.s {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.v {
+  font: 1.4rem 'Tiro Devanagari Marathi', serif;
+  color: var(--deep);
+}
+
+.en {
+  opacity: .6;
+}
+
+.credit {
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px solid #c85a0633;
+  font-size: 18px;
+  opacity: .8;
+}
+
+.credit b,
+.credit a {
+  color: var(--maroon);
+  font-weight: 600;
+  text-decoration: none;
+  // animation: blink 1.2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: .35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .credit b,
+  .credit a {
+    animation: none;
+  }
+}

@@ -1,0 +1,39 @@
+:host {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--maroon), #4d0a14);
+  padding: 64px 20px;
+  --kumkum: #FFD27A;
+}
+
+.wm {
+  position: absolute;
+  right: -40px;
+  top: -30px;
+  font-size: 280px;
+  opacity: .08;
+  color: #fff;
+}
+
+.in {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+app-section-title {
+  --maroon: #fff;
+  display: block;
+}
+
+.cols {
+  display: grid;
+  gap: 22px;
+}
+
+@media (min-width: 800px) {
+  .cols {
+    grid-template-columns: 1fr 1fr;
+  }
+}

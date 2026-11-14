@@ -1,0 +1,41 @@
+<app-section-title>आमची गोष्ट</app-section-title>
+<div class="gallery-wrap" [class.carousel]="media.length > 4">
+  @if (media.length > 4) {
+    <button class="arrow prev" type="button" aria-label="मागील फोटो" aria-controls="photo-reel" (click)="scroll(reel, -1)">
+      <span class="chevron left" aria-hidden="true"></span>
+    </button>
+  }
+  <div class="reel" #reel id="photo-reel">
+    @for (item of media; track item.src) {
+      <figure>
+        <button class="media-trigger" type="button"
+          [attr.aria-label]="item.type === 'video' ? 'व्हिडिओ उघडा' : 'फोटो मोठा करून पाहा'"
+          (click)="openMedia(item, trigger)" #trigger>
+          @if (item.type === 'video') {
+            <video [src]="item.src" muted playsinline preload="metadata" (error)="hide($event)"></video>
+            <span class="play-icon" aria-hidden="true"></span>
+          } @else {
+            <img [src]="item.src" alt="Pre-wedding photo" loading="lazy" (error)="hide($event)">
+          }
+        </button>
+      </figure>
+    }
+  </div>
+  @if (media.length > 4) {
+    <button class="arrow next" type="button" aria-label="पुढील फोटो" aria-controls="photo-reel" (click)="scroll(reel, 1)">
+      <span class="chevron right" aria-hidden="true"></span>
+    </button>
+  }
+</div>
+@if (selectedMedia) {
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="फोटो किंवा व्हिडिओ" tabindex="-1" (click)="closeMedia()">
+    <div class="lightbox-content" (click)="$event.stopPropagation()">
+      <button class="close" type="button" aria-label="बंद करा" (click)="closeMedia()">×</button>
+      @if (selectedMedia.type === 'video') {
+        <video class="lightbox-media" [src]="selectedMedia.src" controls autoplay playsinline></video>
+      } @else {
+        <img class="lightbox-media" [src]="selectedMedia.src" alt="Pre-wedding photo">
+      }
+    </div>
+  </div>
+}

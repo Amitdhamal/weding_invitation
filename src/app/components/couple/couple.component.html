@@ -1,0 +1,19 @@
+<app-section-title>वर आणि वधू</app-section-title>
+<div class="grid">
+  @for (p of people; track p.role; let i = $index) {
+    <article>
+      <div class="avatar"><span>{{ p.name[0] }}</span><img [src]="p.photo" [alt]="p.name" (error)="hide($event)"></div>
+      <p class="role">{{ p.role }}</p>
+      <h3><small>{{ p.prefix }}</small> {{ p.name }}</h3>
+      <p class="fam">{{ p.parents }}</p>
+      <dl>
+        <dt>शिक्षण</dt><dd>{{ p.education }}</dd>
+        <dt>व्यवसाय</dt><dd>{{ p.profession }}</dd>
+      </dl>
+      <p class="about">{{ p.about }}</p>
+    </article>
+    @if (i === 0) {
+      <app-sacred kind="om" class="om" aria-hidden="true" />
+    }
+  }
+</div>

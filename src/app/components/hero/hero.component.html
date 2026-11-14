@@ -1,0 +1,15 @@
+<header [style.--hero]="w.heroImage ? 'url(' + w.heroImage + ')' : 'none'">
+  <app-feather class="ft fl" /><app-feather class="ft fr" />
+  <div class="in">
+    <p class="invitation-title"><b>{{ w.header }}</b></p>
+    <div class="sym"><app-sacred kind="swastik" /><app-sacred kind="om" class="om" /><app-sacred kind="swastik" /></div>
+    <p class="shloka">॥ श्री गणेशाय नमः ॥</p>
+    <h1>
+      <span><small>चि. सौ. कां.</small>{{ w.bride }}</span><span class="amp">आणि</span>
+      <span><small>चि.</small>{{ w.groom }}</span>
+    </h1>
+    <p class="sub">यांचा शुभविवाह</p>
+    <!-- <p class="sub">{{ w.groomEn }} &amp; {{ w.brideEn }} यांचा शुभविवाह</p> -->
+    <p class="when">{{ dateLabel }}</p>
+  </div>
+</header>
