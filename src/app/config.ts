@@ -30,7 +30,7 @@ export const WEDDING = {
   rsvpWhatsApp: '917821051801',              // country code + number, no +
   events: [
     { name: 'उटणे कार्यक्रम', en: 'Utane', when: '२७ फेब्रुवारी, सायं ६:००' },
-    { name: 'सुपारी साखरपुडा', en: 'Engagement', when: '२८ फेब्रुवारी, सकाळी ११:३६' },
+    { name: 'सुपारी साखरपुडा.', en: 'Engagement', when: '२८ फेब्रुवारी, सकाळी ११:३६' },
     { name: 'हळदी समारंभ', en: 'Haldi ceremony', when: '२८ फेब्रुवारी, सकाळी ९:००' },
     { name: 'लग्न', en: 'Muhurat', when: '२८ फेब्रुवारी, ११:३६' },
     // { name: 'स्वागत समारंभ', en: 'Reception', when: '१४ फेब्रुवारी, सायं ७:००' },
