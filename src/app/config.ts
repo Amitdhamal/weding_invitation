@@ -29,7 +29,7 @@ export const WEDDING = {
   mapLink: 'https://maps.app.goo.gl/34YaLDa6XFXSaXwEA',  // paste your Google Maps link
   rsvpWhatsApp: '917821051801',              // country code + number, no +
   events: [
-    { name: 'उटणे कार्यक्रम', en: 'Utane', when: '२७ फेब्रुवारी, सायं ६:००' },
+    { name: 'उटणे कार्यक्रम.', en: 'Utane', when: '२७ फेब्रुवारी, सायं ६:००' },
     { name: 'सुपारी साखरपुडा.', en: 'Engagement', when: '२८ फेब्रुवारी, सकाळी ११:३६' },
     { name: 'हळदी समारंभ', en: 'Haldi ceremony', when: '२८ फेब्रुवारी, सकाळी ९:००' },
     { name: 'लग्न', en: 'Muhurat', when: '२८ फेब्रुवारी, ११:३६' },
