@@ -7,13 +7,13 @@ export const WEDDING = {
   brideEn: 'Tanuja',
   groomParents: 'श्री. व सौ. देशपांडे',
   brideParents: 'श्री. राजेंद्र तळेकर व सौ. उज्ज्वला राजेंद्र तळेकर',
-  date: '2026-11-15T18:36:00+05:30',       // Muhurat date & time
+  date: '2027-02-28T17:07:00+05:30',       // Muhurat date & time
   groomInfo: {
     photo: 'https://d397bfy4gvgcdm.cloudfront.net/423722-D1-OwQRK.jpeg',
     // photo: 'assets/people/groom.jpg',
     parents: 'श्री. व सौ. देशपांडे यांचे चिरंजीव',
     education: 'बी.ई. (संगणक अभियांत्रिकी)',
-    profession: 'सॉफ्टवेअर इंजिनिअर, पुणे',
+    profession: 'मुंबई पोलीस, मुंबई',
     about: 'शांत, मनमिळावू आणि कुटुंबवत्सल. प्रवास, क्रिकेट आणि संगीताची आवड.',
   },
   brideInfo: {
@@ -29,10 +29,11 @@ export const WEDDING = {
   mapLink: 'https://maps.app.goo.gl/34YaLDa6XFXSaXwEA',  // paste your Google Maps link
   rsvpWhatsApp: '917821051801',              // country code + number, no +
   events: [
-    { name: 'सुपारी साखरपुडा', en: 'Engagement', when: '१२ फेब्रुवारी, सायं ६:००' },
-    { name: 'हळदी समारंभ', en: 'Haldi ceremony', when: '१३ फेब्रुवारी, सकाळी ९:००' },
-    { name: 'लग्न', en: 'Muhurat', when: '१४ फेब्रुवारी, ११:३६' },
-    { name: 'स्वागत समारंभ', en: 'Reception', when: '१४ फेब्रुवारी, सायं ७:००' },
+    { name: 'उटणे कार्यक्रम', en: 'Utane', when: '२७ फेब्रुवारी, सायं ६:००' },
+    { name: 'सुपारी साखरपुडा', en: 'Engagement', when: '२८ फेब्रुवारी, सकाळी ११:३६' },
+    { name: 'हळदी समारंभ', en: 'Haldi ceremony', when: '२८ फेब्रुवारी, सकाळी ९:००' },
+    { name: 'लग्न', en: 'Muhurat', when: '२८ फेब्रुवारी, ११:३६' },
+    // { name: 'स्वागत समारंभ', en: 'Reception', when: '१४ फेब्रुवारी, सायं ७:००' },
   ],
   // Put photos in src/assets/photos and videos in src/assets/videos, then list them here.
   feather: 'assets/feather.png',   // your peacock feather image (see src/assets/README.txt)

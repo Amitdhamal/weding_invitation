@@ -58,6 +58,10 @@ small {
   opacity: .6;
 }
 
+.card p {
+  font-family: 'Tiro Devanagari Marathi', serif;
+}
+
 @media (min-width: 800px) {
   ol::before {
     left: 50%;
