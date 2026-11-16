@@ -9,7 +9,7 @@ export const WEDDING = {
   brideParents: 'श्री. राजेंद्र तळेकर व सौ. उज्ज्वला राजेंद्र तळेकर',
   date: '2027-02-28T17:07:00+05:30',       // Muhurat date & time
   groomInfo: {
-    photo: 'https://d397bfy4gvgcdm.cloudfront.net/423722-D1-OwQRK.jpeg',
+    photo: '',
     // photo: 'assets/people/groom.jpg',
     parents: 'श्री. व सौ. देशपांडे यांचे चिरंजीव',
     education: 'बी.ई. (संगणक अभियांत्रिकी)',
@@ -17,7 +17,7 @@ export const WEDDING = {
     about: 'शांत, मनमिळावू आणि कुटुंबवत्सल. प्रवास, क्रिकेट आणि संगीताची आवड.',
   },
   brideInfo: {
-    photo: 'https://i.pinimg.com/736x/cc/1a/8c/cc1a8c51abf285a67996745fe8834e26.jpg',
+    photo: '',
     parents: 'श्री. राजेंद्र तळेकर व सौ. उज्ज्वला राजेंद्र तळेकर यांची कन्या',
     education: 'एम.कॉम.',
     profession: 'चार्टर्ड अकाउंटंट, पुणे',
