@@ -24,14 +24,15 @@ export const WEDDING = {
     about: 'हसतमुख, जिद्दी आणि कलाप्रेमी. चित्रकला, नृत्य आणि वाचनाची आवड.',
   },
   credit: { text: 'by', name: 'GuruWebs Designers', url: 'https://guruwebs.netlify.app/' },  // add a website link in url to make the name clickable
-  venue: 'रामेश्वर गार्डन मंगल कार्यालय',
-  address: 'तळेकर वस्ती, तालुका खंडाळा,शिंदेवाडी, विंग, महाराष्ट्र ',
-  mapLink: 'https://maps.app.goo.gl/34YaLDa6XFXSaXwEA',  // paste your Google Maps link
+  venue: 'विराज मल्टीपर्पज हॉल',
+  address: 'पारगांव खंडाळा ,सातारा',
+  mapLink: 'https://maps.app.goo.gl/jpc6grpQCphuTj1dA',  // paste your Google Maps link
   rsvpWhatsApp: '917821051801',              // country code + number, no +
   events: [
     { name: 'उटणे कार्यक्रम', en: 'Utane', when: '२७ फेब्रुवारी, सायं ६:००' },
     { name: 'सुपारी साखरपुडा', en: 'Engagement', when: '२८ फेब्रुवारी, सकाळी ११:३६' },
     { name: 'हळदी समारंभ', en: 'Haldi ceremony', when: '२८ फेब्रुवारी, सकाळी ९:००' },
+    { name: 'भोजन समारंभ', en: 'Bhojan Samarambha', when: '२८ फेब्रुवारी, दुपारी २ ते सायं ६' },
     { name: 'लग्न', en: 'Muhurat', when: '२८ फेब्रुवारी, ११:३६' },
     // { name: 'स्वागत समारंभ', en: 'Reception', when: '१४ फेब्रुवारी, सायं ७:००' },
   ],

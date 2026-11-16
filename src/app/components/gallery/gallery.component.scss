@@ -20,6 +20,15 @@ app-section-title {
   scroll-behavior: smooth;
 }
 
+.gallery-wrap:not(.carousel) .reel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 280px));
+  justify-content: center;
+  max-width: 1240px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
 .gallery-wrap {
   position: relative;
 }
@@ -193,6 +202,29 @@ figure:nth-child(even) {
 }
 
 @media (max-width: 520px) {
+  :host {
+    padding: 40px 0;
+  }
+
+  .reel {
+    gap: 16px;
+    padding: 16px 16px 28px;
+  }
+
+  .gallery-wrap:not(.carousel) .reel {
+    grid-template-columns: minmax(0, 280px);
+  }
+
+  .carousel .reel {
+    padding-inline: 48px;
+    scroll-padding-inline: 48px;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+  }
+
   .lightbox {
     padding: 16px;
   }
