@@ -8,9 +8,10 @@ import { GalleryComponent } from '../components/gallery/gallery.component';
 import { VenueRsvpComponent } from '../components/venue-rsvp/venue-rsvp.component';
 import { SiteFooterComponent } from '../components/site-footer/site-footer.component';
 import { CountdownBarComponent } from '../components/countdown-bar/countdown-bar.component';
+import { NimantrakComponent } from '../components/nimantrak/nimantrak.component';
 @Component({
   selector: 'app-root', standalone: true,
-  imports: [PetalsComponent, HeroComponent, InvitationNoteComponent, CoupleComponent, EventsComponent, GalleryComponent, VenueRsvpComponent, SiteFooterComponent, CountdownBarComponent],
+  imports: [PetalsComponent, HeroComponent, InvitationNoteComponent, CoupleComponent, EventsComponent, GalleryComponent, VenueRsvpComponent, NimantrakComponent, SiteFooterComponent, CountdownBarComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

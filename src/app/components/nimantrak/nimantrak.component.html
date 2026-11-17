@@ -1,0 +1,18 @@
+<app-section-title>निमंत्रक</app-section-title>
+<ul class="contacts">
+  @for (person of contactPeople; track person.name) {
+    <li>
+      @if (person.phone) {
+        <a class="contact-card" [href]="'tel:' + person.phone">
+          <strong>{{ person.name }}</strong>
+          <span>{{ person.phone }}</span>
+        </a>
+      } @else {
+        <div class="contact-card">
+          <strong>{{ person.name }}</strong>
+          <span>मोबाईल नंबर येथे भरा</span>
+        </div>
+      }
+    </li>
+  }
+</ul>
