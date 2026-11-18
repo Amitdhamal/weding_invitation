@@ -1,32 +1,100 @@
 <app-section-title>आमची गोष्ट</app-section-title>
-<div class="gallery-wrap" [class.carousel]="media.length > 4">
-  @if (media.length > 4) {
-    <button class="arrow prev" type="button" aria-label="मागील फोटो" aria-controls="photo-reel" (click)="scroll(reel, -1)">
-      <span class="chevron left" aria-hidden="true"></span>
-    </button>
+
+<ng-template #pageContent let-item let-alt="alt" let-showPlay="showPlay">
+  @if (item.type === 'video') {
+    <video [src]="item.src" muted playsinline preload="metadata" (error)="hide($event)"></video>
+    @if (showPlay) {
+      <span class="play-icon" aria-hidden="true"></span>
+    }
+  } @else {
+    <img [src]="item.src" [alt]="alt" (error)="hide($event)">
   }
-  <div class="reel" #reel id="photo-reel">
-    @for (item of media; track item.src) {
-      <figure>
-        <button class="media-trigger" type="button"
-          [attr.aria-label]="item.type === 'video' ? 'व्हिडिओ उघडा' : 'फोटो मोठा करून पाहा'"
-          (click)="openMedia(item, trigger)" #trigger>
-          @if (item.type === 'video') {
-            <video [src]="item.src" muted playsinline preload="metadata" (error)="hide($event)"></video>
-            <span class="play-icon" aria-hidden="true"></span>
-          } @else {
-            <img [src]="item.src" alt="Pre-wedding photo" loading="lazy" (error)="hide($event)">
-          }
+</ng-template>
+
+@if (media.length) {
+  <div class="album" aria-label="आमच्या आठवणींचे फोटोबुक">
+    @if (isOpen) {
+      <button class="arrow prev" type="button" aria-label="मागील पान"
+        [disabled]="currentIndex === 0 || flipDirection !== 0" (click)="turnPage(-1)">
+        <span class="chevron left" aria-hidden="true"></span>
+      </button>
+    }
+
+    <div class="book" [class.closed]="!isOpen && !isOpening"
+      [class.open]="isOpen" [class.opening]="isOpening">
+      @if (isOpen || isOpening) {
+        <div class="spread">
+          <div class="page left-page">
+            @if (leftMedia) {
+              <button class="media-trigger" type="button" [disabled]="flipDirection !== 0"
+                [attr.aria-label]="leftMedia.type === 'video' ? 'व्हिडिओ उघडा' : 'फोटो मोठा करून पाहा'"
+                (click)="openMedia(leftMedia, leftTrigger)" #leftTrigger>
+                <ng-container [ngTemplateOutlet]="pageContent"
+                  [ngTemplateOutletContext]="{ $implicit: leftMedia, alt: 'Previous page photo', showPlay: true }">
+                </ng-container>
+              </button>
+              <span class="page-number">{{ leftPageNumber }} / {{ media.length }}</span>
+            } @else {
+              <div class="blank-page" aria-hidden="true"></div>
+            }
+          </div>
+          <div class="page right-page">
+            <button class="media-trigger" type="button" [disabled]="flipDirection !== 0"
+              [attr.aria-label]="displayMedia.type === 'video' ? 'व्हिडिओ उघडा' : 'फोटो मोठा करून पाहा'"
+              (click)="openMedia(displayMedia, trigger)" #trigger>
+              <ng-container [ngTemplateOutlet]="pageContent"
+                [ngTemplateOutletContext]="{ $implicit: displayMedia, alt: 'Pre-wedding photo', showPlay: true }">
+              </ng-container>
+            </button>
+            <span class="page-number">{{ displayedPageNumber }} / {{ media.length }}</span>
+          </div>
+        </div>
+
+        @if (isOpen && flipDirection !== 0) {
+          <div class="turning-page" [class.forward]="flipDirection === 1"
+            [class.backward]="flipDirection === -1" (animationend)="finishFlip()">
+            <div class="page-face front">
+              <ng-container [ngTemplateOutlet]="pageContent"
+                [ngTemplateOutletContext]="{ $implicit: flipFrontMedia, alt: '', showPlay: false }">
+              </ng-container>
+            </div>
+            <div class="page-face back">
+              <ng-container [ngTemplateOutlet]="pageContent"
+                [ngTemplateOutletContext]="{ $implicit: flipBackMedia, alt: '', showPlay: false }">
+              </ng-container>
+            </div>
+          </div>
+        }
+
+        @if (isOpen) {
+          <button class="close-book" type="button" [disabled]="flipDirection !== 0"
+            (click)="closeAlbum()">पुस्तक बंद करा</button>
+        }
+      }
+
+      @if (!isOpen) {
+        <button class="closed-cover" [class.opening]="isOpening" type="button"
+          [disabled]="isOpening" (click)="openAlbum()" (animationend)="finishOpening()"
+          [attr.aria-hidden]="isOpening ? 'true' : null" aria-label="फोटोबुक उघडा">
+          <span class="cover-kicker">{{ w.bride }} आणि {{ w.groom }}</span>
+          <span class="cover-title">आमची गोष्ट</span>
+          <span class="cover-subtitle">आठवणींचे फोटोबुक</span>
+          <span class="cover-prompt">उघडण्यासाठी स्पर्श करा</span>
         </button>
-      </figure>
+      }
+    </div>
+
+    @if (isOpen) {
+      <button class="arrow next" type="button" aria-label="पुढील पान"
+        [disabled]="currentIndex === media.length - 1 || flipDirection !== 0" (click)="turnPage(1)">
+        <span class="chevron right" aria-hidden="true"></span>
+      </button>
     }
   </div>
-  @if (media.length > 4) {
-    <button class="arrow next" type="button" aria-label="पुढील फोटो" aria-controls="photo-reel" (click)="scroll(reel, 1)">
-      <span class="chevron right" aria-hidden="true"></span>
-    </button>
-  }
-</div>
+} @else {
+  <p class="empty-message">फोटो लवकरच जोडले जातील.</p>
+}
+
 @if (selectedMedia) {
   <div class="lightbox" role="dialog" aria-modal="true" aria-label="फोटो किंवा व्हिडिओ" tabindex="-1" (click)="closeMedia()">
     <div class="lightbox-content" (click)="$event.stopPropagation()">

@@ -32,7 +32,7 @@ export const WEDDING = {
   rsvpWhatsApp: '917821051801',              // country code + number, no +
   contactPeople: [
     { name: 'कु. गोविंद राजेंद्र तळेकर.', phone: '7821051801' },
-    { name: 'श्री. राजेंद्र तळेकर', phone: 9870199268 },
+    { name: 'श्री. राजेंद्र तळेकर.', phone: '9870199268' },
   ],
   events: [
     { name: 'उटणे कार्यक्रम', en: 'Utane', when: '२७ फेब्रुवारी, सायं ६:००' },
