@@ -1,11 +1,19 @@
-<p class="label">📍 स्थळ</p>
+<p class="label">📍 विवाहस्थळ</p>
 <h3>{{ w.venue }}</h3>
-<p>{{ w.address }}</p>
+<p>{{ w.address }}.</p>
 <figure>
-  <img [src]="qr()" alt="Venue map QR code">
-  <figcaption>स्कॅन करा आणि मार्ग पाहा</figcaption>
+  @if (qr()) {
+    <img [src]="qr()" alt="Venue map QR code">
+    <figcaption>स्कॅन करा आणि विवाहस्थळाकडे येण्याचा मार्ग पाहा</figcaption>
+  } @else {
+    <p>{{ qrError() || 'QR कोड तयार होत आहे...' }}</p>
+  }
 </figure>
 <div class="btns">
-  <a [href]="w.mapLink" target="_blank" rel="noopener">नकाशा उघडा</a>
-  <a class="alt" [href]="calUrl" target="_blank" rel="noopener">Google कॅलेंडरमध्ये जोडा</a>
+  @if (mapUrl) {
+    <a [href]="mapUrl" target="_blank" rel="noopener noreferrer">नकाशा उघडा</a>
+  } @else {
+    <span>नकाशाची लिंक उपलब्ध नाही.</span>
+  }
+  <a class="alt" [href]="calUrl" target="_blank" rel="noopener noreferrer">Google कॅलेंडरमध्ये जोडा</a>
 </div>

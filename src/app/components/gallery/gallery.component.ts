@@ -68,6 +68,7 @@ export class GalleryComponent {
   }
 
   openAlbum() {
+    this.currentIndex = 0;
     if (this.isOpening || this.isOpen) return;
     this.isOpening = true;
     this.openingTimer = setTimeout(() => this.finishOpening(), 760);

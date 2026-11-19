@@ -3,9 +3,11 @@
   @for (person of contactPeople; track person.name) {
     <li>
       @if (person.phone) {
-        <a class="contact-card" [href]="'tel:' + person.phone">
+        <a class="contact-card" [href]="'tel:' + person.phone"
+          [attr.aria-label]="person.name + ' यांना कॉल करण्यासाठी टॅप करा'">
           <strong>{{ person.name }}</strong>
-          <span>{{ person.phone }}</span>
+          <span class="phone-number">{{ person.phone }}</span>
+          <span class="call-action">कॉल करण्यासाठी येथे टॅप करा</span>
         </a>
       } @else {
         <div class="contact-card">

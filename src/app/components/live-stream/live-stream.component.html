@@ -1,0 +1,51 @@
+<app-section-title>लग्नसोहळ्याचे थेट प्रक्षेपण</app-section-title>
+
+<section class="live-stream" aria-label="लग्नसोहळ्याचे थेट प्रक्षेपण">
+  <div class="screen">
+    @if (streamUrl) {
+      <iframe
+        [src]="streamUrl"
+        title="लग्नसोहळ्याचे थेट प्रक्षेपण"
+        allow="encrypted-media; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    } @else {
+      <div class="placeholder" role="status">
+        <span class="live-badge">LIVE</span>
+        <p>{{ hasInvalidStreamUrl ? 'लाइव्ह स्ट्रीमची YouTube लिंक तपासा.' : 'लाइव्ह स्ट्रीमची लिंक लवकरच जोडली जाईल.' }}</p>
+      </div>
+    }
+
+    @for (particle of akshata; track particle.id) {
+      <span class="grain" aria-hidden="true"
+        [style.left.%]="particle.left"
+        [style.--drift]="particle.drift + 'px'"
+        [style.animation-delay.ms]="particle.delay"
+        [style.animation-duration.ms]="particle.duration">
+      </span>
+    }
+  </div>
+
+  <button [disabled]="!streamUrl" class="akshata-button" type="button" (click)="throwAkshata()">
+    <span aria-hidden="true">✦</span>
+    अक्षता टाका
+  </button>
+  <p class="hint" aria-live="polite">
+    {{ akshata.length ? 'अक्षतांचा वर्षाव झाला! शुभमंगल सावधान!' : 'अक्षता टाका — हा इफेक्ट फक्त तुमच्या स्क्रीनवर दिसेल.' }}
+  </p>
+
+  @if (isAdminMode) {
+    <div class="admin-panel">
+      <label for="live-stream-url">YouTube व्हिडिओ किंवा लाइव्ह लिंक</label>
+      <input #streamUrlInput id="live-stream-url" type="url" [value]="streamInput"
+        placeholder="https://www.youtube.com/watch?v=..." autocomplete="url">
+      <div class="admin-actions">
+        <button type="button" (click)="saveStreamUrl(streamUrlInput.value)">या ब्राउझरमध्ये सेव्ह करा</button>
+        <button class="reset-button" type="button" (click)="resetStreamUrl()">मूळ लिंक वापरा</button>
+      </div>
+      <p class="admin-notice">ही लिंक फक्त या ब्राउझरमध्ये सेव्ह होईल; इतर पाहुण्यांना बदल दिसणार नाहीत.</p>
+      <p class="admin-message" aria-live="polite">{{ adminMessage }}</p>
+    </div>
+  }
+</section>

@@ -7,11 +7,18 @@
   <li>“Send” दाबा. उपस्थिती थेट आयोजकांपर्यंत पोहोचेल.</li>
 </ol>
 <figure>
-  <img [src]="qr()" alt="RSVP QR code">
-  <figcaption>कृपया प्रतिसाद द्या</figcaption>
-  <!-- <figcaption>स्कॅन करा आणि उपस्थिती कळवा </figcaption> -->
+  @if (qr()) {
+    <img [src]="qr()" alt="RSVP QR code">
+    <figcaption>कृपया स्कॅन करा आणि प्रतिसाद द्या</figcaption>
+  } @else {
+    <p>{{ qrError() || 'QR कोड तयार होत आहे...' }}</p>
+  }
 </figure>
 <div class="btns">
-  <a [href]="rsvpUrl" target="_blank" rel="noopener">WhatsApp वर कळवा</a>
+  @if (rsvpUrl) {
+    <a [href]="rsvpUrl" target="_blank" rel="noopener noreferrer">WhatsApp वर कळवा</a>
+  } @else {
+    <span>WhatsApp लिंक उपलब्ध नाही.</span>
+  }
   <button type="button" class="alt" (click)="share()">आमंत्रण शेअर करा</button>
 </div>

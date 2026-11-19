@@ -16,23 +16,52 @@
 
 .contact-card {
   display: grid;
-  gap: 6px;
+  gap: 8px;
+  min-height: 150px;
+  align-content: center;
   padding: 18px;
   background: #fff8ee;
   border: 1px solid #c85a0633;
   border-left: 5px solid var(--saffron);
   border-radius: 14px;
-  box-shadow: 4px 4px 0 #c99a2e55;
+  box-shadow: 5px 0 12px #3a1d1218;
   text-align: center;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
 strong {
   color: var(--maroon);
+  font-size: 1.1rem;
 }
 
 .contact-card span {
   color: var(--ink);
   overflow-wrap: anywhere;
+}
+
+.phone-number {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.call-action {
+  display: inline-flex;
+  justify-self: center;
+  align-items: center;
+  gap: 7px;
+  margin-top: 2px;
+  padding: 5px 13px;
+  border: 1px solid #7a102033;
+  border-radius: 999px;
+  background: #7a10200d;
+  color: var(--maroon) !important;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.call-action::before {
+  content: '☎';
+  font-size: 1rem;
 }
 
 a.contact-card {
@@ -44,4 +73,24 @@ a.contact-card {
 a.contact-card:focus-visible {
   outline: 3px solid var(--maroon);
   outline-offset: 3px;
+  box-shadow: 0 0 0 5px #c99a2e55;
+}
+
+@media (hover: hover) {
+  a.contact-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--saffron);
+    box-shadow: 6px 0 16px #3a1d1224;
+  }
+}
+
+a.contact-card:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: 2px 0 8px #3a1d1218;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-card {
+    transition: none;
+  }
 }

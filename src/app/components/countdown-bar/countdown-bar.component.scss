@@ -26,7 +26,7 @@ div {
   color: #fff;
   padding: 12px 22px;
   border-radius: 999px;
-  box-shadow: 0 6px 18px #4d0a1466;
+  box-shadow: 5px 0 12px #3a1d1218;
   font-size: .9rem;
   border: 2px solid #FFD27A;
 }
@@ -35,6 +35,21 @@ b {
   font: 1.3rem 'Tiro Devanagari Marathi', serif;
   color: #FFD27A;
   font-weight: 400;
+}
+
+.celebration-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.celebration-canvas.active {
+  opacity: 1;
 }
 
 @media (max-width: 420px) {

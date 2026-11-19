@@ -7,7 +7,7 @@ export const WEDDING = {
   brideEn: 'Tanuja',
   groomParents: 'कै. राजेंद्र बाजीराव यादव',
   brideParents: 'श्री. राजेंद्र तळेकर',
-  date: '2027-02-28T17:00:00+05:30',       // Muhurat date & time
+  date: '2027-02-28T17:30:00+05:30',       // Muhurat date & time
   groomInfo: {
     photo: '',
     // photo: 'assets/people/groom.jpg',
@@ -29,6 +29,7 @@ export const WEDDING = {
   venue: 'विराज मल्टीपर्पज हॉल',
   address: 'पारगांव खंडाळा ,सातारा',
   mapLink: 'https://maps.app.goo.gl/jpc6grpQCphuTj1dA',  // paste your Google Maps link
+  liveStreamUrl: '', // Optional YouTube video/live URL (watch, live, youtu.be, or embed); blank shows a placeholder.
   rsvpWhatsApp: '917821051801',              // country code + number, no +
   contactPeople: [
     { name: 'कु. गोविंद राजेंद्र तळेकर.', phone: '7821051801' },

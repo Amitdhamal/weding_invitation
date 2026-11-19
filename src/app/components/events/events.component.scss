@@ -46,7 +46,7 @@ li::before {
   border-radius: 16px;
   border: 1px solid #c85a0633;
   border-left: 6px solid var(--saffron);
-  box-shadow: 6px 6px 0 #c99a2e55;
+  box-shadow: 5px 0 12px #3a1d1218;
 }
 
 h3 {
@@ -60,6 +60,16 @@ small {
 
 .card p {
   font-family: 'Tiro Devanagari Marathi', serif;
+}
+
+.food-note {
+  margin-top: 10px;
+  padding: 9px 12px;
+  border-left: 4px solid var(--saffron);
+  border-radius: 10px;
+  background: #fff3d4;
+  color: var(--maroon);
+  line-height: 1.55;
 }
 
 @media (min-width: 800px) {

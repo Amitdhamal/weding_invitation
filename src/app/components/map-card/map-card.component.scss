@@ -1,1 +1,5 @@
 @use '../info-card';
+
+figure {
+  width: min(210px, 100%);
+}
