@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild, signal } from '@angular/core';
 import { WEDDING } from '../../config';
+import { CommonService } from '../../../shared/services/common.service';
 
 interface Rocket {
   x: number;
@@ -27,6 +28,7 @@ interface Spark {
   styleUrls: ['./countdown-bar.component.scss'],
 })
 export class CountdownBarComponent implements OnInit, AfterViewInit, OnDestroy {
+  constructor(private commonService: CommonService) {}
   @ViewChild('celebrationCanvas') celebrationCanvas?: ElementRef<HTMLCanvasElement>;
 
   tiles = signal<{ v: string; l: string }[]>([]); over = signal(false);
@@ -42,6 +44,7 @@ export class CountdownBarComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit() { this.tick(); this.timer = setInterval(() => this.tick(), 1000); }
   ngAfterViewInit() {
     if (this.over()) this.startCelebration();
+    this.commonService.sendMarriageOver(this.over());
   }
   ngOnDestroy() {
     clearInterval(this.timer);
@@ -58,6 +61,7 @@ export class CountdownBarComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.target <= now.getTime()) {
       if (!this.over()) {
         this.over.set(true);
+        this.commonService.sendMarriageOver(true);
         this.startCelebration();
       }
       return;

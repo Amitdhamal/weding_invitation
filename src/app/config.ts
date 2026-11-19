@@ -7,7 +7,7 @@ export const WEDDING = {
   brideEn: 'Tanuja',
   groomParents: 'कै. राजेंद्र बाजीराव यादव',
   brideParents: 'श्री. राजेंद्र तळेकर',
-  date: '2027-02-28T17:30:00+05:30',       // Muhurat date & time
+  date: '2026-11-19T18:19:00+05:30',       // Muhurat date & time
   groomInfo: {
     photo: '',
     // photo: 'assets/people/groom.jpg',

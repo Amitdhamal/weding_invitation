@@ -1,4 +1,4 @@
-<!-- <app-petals /> -->
+<app-petals />
 <app-hero />
 <app-invitation-note />
 <app-couple />
@@ -9,14 +9,4 @@
 <app-nimantrak />
 <app-countdown-bar />
 <app-site-footer />
-<audio #backgroundMusic src="assets/audio/background.mp3" loop preload="auto"></audio>
-<button
-  class="music-toggle"
-  type="button"
-  (click)="toggleMusic()"
-  [attr.aria-label]="musicPlaying() ? (musicMuted() ? 'Unmute background music' : 'Mute background music') : 'Play background music'"
-  [attr.aria-pressed]="musicPlaying() && !musicMuted()"
->
-  <span aria-hidden="true">{{ musicPlaying() && !musicMuted() ? '🔊' : '🔇' }}</span>
-  <span>{{ musicPlaying() ? (musicMuted() ? 'Unmute music' : 'Mute music') : 'Play music' }}</span>
-</button>
+
