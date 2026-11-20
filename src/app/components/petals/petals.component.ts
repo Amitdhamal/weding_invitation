@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { CommonService } from '../../../shared/services/common.service';
 import { Subscription } from 'rxjs';
-/** Falling rose petals (gulab pakalya). Keyframes live in styles.css. */
+/** Falling rose petals (gulab pakalya). Keyframes live in styles.scss. */
 @Component({
   selector: 'app-petals', standalone: true,
   templateUrl: './petals.component.html',

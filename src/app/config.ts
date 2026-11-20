@@ -28,7 +28,7 @@ export const WEDDING = {
   credit: { text: 'by', name: 'GuruWebs Designers', url: 'https://guruwebs.netlify.app/' },  // add a website link in url to make the name clickable
   venue: 'विराज मल्टीपर्पज हॉल',
   address: 'पारगांव खंडाळा ,सातारा',
-  mapLink: 'https://maps.app.goo.gl/jpc6grpQCphuTj1dA',  // paste your Google Maps link
+  mapLink: 'https://maps.app.goo.gl/CyTvsHJmjzoB4vmM9',  // paste your Google Maps link
   liveStreamUrl: '', // Optional YouTube video/live URL (watch, live, youtu.be, or embed); blank shows a placeholder.
   rsvpWhatsApp: '917821051801',              // country code + number, no +
   contactPeople: [

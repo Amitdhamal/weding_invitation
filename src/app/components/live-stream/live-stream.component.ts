@@ -57,6 +57,7 @@ export class LiveStreamComponent implements OnDestroy {
   private burstSequence = 0;
   private burstTimer?: ReturnType<typeof setTimeout>;
   public w = WEDDING;
+  blankYoutubeUrlMsg = `लाइव्ह स्ट्रीमची लिंक विवाह शुभमुहुर्ताच्या काही मिनिटे आधी जोडली जाईल. <br> अक्षता बटन लाइव्ह स्ट्रीम चालू झाल्यावरच कार्यरत होईल.`;
 
   constructor() {
     const localStreamUrl = this.readLocalStreamUrl();

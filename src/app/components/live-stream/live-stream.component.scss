@@ -51,6 +51,9 @@ iframe {
 }
 
 .live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   padding: 3px 12px;
   border: 1px solid #ffd27a;
   border-radius: 999px;
@@ -58,6 +61,15 @@ iframe {
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.12em;
+}
+
+.live-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ff3347;
+  box-shadow: 0 0 8px #ff3347aa;
+  animation: live-blink 2s ease-in-out infinite;
 }
 
 .grain {
@@ -210,6 +222,13 @@ iframe {
   }
 }
 
+@keyframes live-blink {
+  50% {
+    opacity: 0.35;
+    box-shadow: 0 0 2px #ff334766;
+  }
+}
+
 @media (max-width: 600px) {
   :host {
     padding: 40px 16px;
@@ -233,6 +252,10 @@ iframe {
 @media (prefers-reduced-motion: reduce) {
   .grain {
     animation-duration: 1ms !important;
+  }
+
+  .live-dot {
+    animation: none;
   }
 
   .akshata-button {

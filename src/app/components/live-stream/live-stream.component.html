@@ -12,8 +12,8 @@
       </iframe>
     } @else {
       <div class="placeholder" role="status">
-        <span class="live-badge">LIVE</span>
-        <p>{{ hasInvalidStreamUrl ? 'लाइव्ह स्ट्रीमची YouTube लिंक तपासा.' : 'लाइव्ह स्ट्रीमची लिंक लवकरच जोडली जाईल.' }}</p>
+        <span class="live-badge">LIVE<span class="live-dot" aria-hidden="true"></span></span>
+        <p [innerHTML]="hasInvalidStreamUrl ? 'लाइव्ह स्ट्रीमची YouTube लिंक तपासा.' : blankYoutubeUrlMsg"></p>
       </div>
     }
 
