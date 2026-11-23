@@ -37,3 +37,13 @@ app-section-title {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media (max-width: 799px) {
+  :host {
+    padding: 40px 14px;
+  }
+
+  .wm {
+    right: -70px;
+  }
+}

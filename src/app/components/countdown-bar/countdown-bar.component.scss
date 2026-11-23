@@ -53,9 +53,19 @@ b {
 }
 
 @media (max-width: 420px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+
   div {
-    gap: 8px;
-    padding: 10px 14px;
-    font-size: .8rem;
+    gap: 6px;
+    width: calc(100% - 28px);
+    padding: 10px 12px;
+    border-radius: 18px;
+    font-size: 0.875rem;
+  }
+
+  b {
+    font-size: 1.25rem;
   }
 }

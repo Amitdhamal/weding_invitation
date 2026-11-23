@@ -11,3 +11,11 @@ h2 {
 app-sacred {
   font-size: 1.5rem;
 }
+
+@media (max-width: 600px) {
+  h2 {
+    margin-bottom: 20px;
+    font-size: clamp(1.45rem, 7vw, 1.9rem);
+    line-height: 1.35;
+  }
+}

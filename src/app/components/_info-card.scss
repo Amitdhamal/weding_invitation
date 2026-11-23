@@ -88,3 +88,29 @@ figcaption {
   outline: 3px solid var(--saffron);
   outline-offset: 3px;
 }
+
+@media (max-width: 600px) {
+  :host {
+    padding: 22px 16px;
+  }
+
+  figure {
+    width: min(170px, 70vw);
+  }
+
+  ol {
+    padding-left: 18px;
+  }
+
+  .btns {
+    align-items: stretch;
+  }
+
+  .btns a,
+  .btns button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

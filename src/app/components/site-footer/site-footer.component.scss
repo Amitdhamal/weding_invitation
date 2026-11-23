@@ -49,3 +49,13 @@
     animation: none;
   }
 }
+
+@media (max-width: 600px) {
+  :host {
+    padding: 40px 14px calc(32px + env(safe-area-inset-bottom, 0));
+  }
+
+  .credit {
+    font-size: 16px;
+  }
+}

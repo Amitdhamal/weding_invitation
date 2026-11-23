@@ -97,3 +97,17 @@ small {
     left: -10px;
   }
 }
+
+@media (max-width: 799px) {
+  :host {
+    padding: 40px 14px;
+  }
+
+  .card {
+    padding: 14px 16px;
+  }
+
+  h3 {
+    line-height: 1.35;
+  }
+}

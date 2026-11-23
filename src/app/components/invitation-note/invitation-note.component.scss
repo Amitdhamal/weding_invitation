@@ -26,3 +26,18 @@
 .d app-sacred {
   font-size: 2rem;
 }
+
+@media (max-width: 600px) {
+  :host {
+    padding: 40px 16px;
+    font-size: 1.05rem;
+  }
+
+  .d {
+    gap: 10px;
+  }
+
+  .d app-feather {
+    width: 38px;
+  }
+}

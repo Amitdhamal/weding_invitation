@@ -94,3 +94,21 @@ a.contact-card:active {
     transition: none;
   }
 }
+
+@media (max-width: 600px) {
+  :host {
+    padding: 16px 14px 40px;
+  }
+
+  .contacts {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    min-height: 132px;
+  }
+
+  .call-action {
+    min-height: 44px;
+  }
+}

@@ -427,6 +427,33 @@ app-section-title {
   }
 }
 
+@media (max-width: 420px) {
+  .album {
+    gap: 4px;
+    padding-inline: 6px;
+  }
+
+  .book {
+    min-width: 0;
+  }
+
+  .arrow {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .cover-kicker,
+  .cover-subtitle,
+  .cover-prompt {
+    text-align: center;
+  }
+
+  .cover-title {
+    padding-inline: 12px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .turning-page.forward,
   .turning-page.backward {
