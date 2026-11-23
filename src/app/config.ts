@@ -9,7 +9,7 @@ export const WEDDING = {
   brideParents: 'श्री. राजेंद्र तळेकर',
   date: '2027-02-28T16:26:00+05:30',       // Muhurat date & time
   groomInfo: {
-    photo: '',
+    photo: './assets/photos/people/groom.png',
     // photo: 'assets/people/groom.jpg',
     grandparents: 'कै.बाजीराव यादव यांचा नातू',
     parents: 'कै. राजेंद्र बाजीराव यादव यांचे सुपुत्र',
@@ -19,7 +19,7 @@ export const WEDDING = {
     address: 'मु. केसुर्डी, पो. नायगाव, ता. खंडाळा, जि. सातारा.',
   },
   brideInfo: {
-    photo: '',
+    photo: './assets/photos/people/bride.png',
     grandparents: 'कै. **** तळेकर यांची नात',
     parents: 'श्री. राजेंद्र तळेकर यांची कन्या',
     education: 'एम.कॉम.',

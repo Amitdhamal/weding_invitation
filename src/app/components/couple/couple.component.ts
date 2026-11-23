@@ -11,8 +11,8 @@ import { SacredComponent } from '../sacred/sacred.component';
 export class CoupleComponent {
   w = WEDDING;
   people = [
-    { role: 'वधू', prefix: 'चि. सौ. कां.', name: WEDDING.bride, ...WEDDING.brideInfo },
     { role: 'वर', prefix: 'चि.', name: WEDDING.groom, ...WEDDING.groomInfo },
+    { role: 'वधू', prefix: 'चि. सौ. कां.', name: WEDDING.bride, ...WEDDING.brideInfo },
   ];
   hide(e: Event) { (e.target as HTMLElement).style.display = 'none'; }
 }
