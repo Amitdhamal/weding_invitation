@@ -27,6 +27,12 @@
   font-size: 2rem;
 }
 
+@media (min-width: 700px) {
+  :host {
+    max-width: 800px;
+  }
+}
+
 @media (max-width: 600px) {
   :host {
     padding: 40px 16px;

@@ -6,12 +6,12 @@ export const WEDDING = {
   groomEn: 'Rohan',
   brideEn: 'Tanuja',
   groomParents: 'कै. राजेंद्र बाजीराव यादव',
-  brideParents: 'श्री. राजेंद्र तळेकर',
+  brideParents: 'श्री. राजेंद्र एकनाथ तळेकर',
   date: '2027-02-28T16:26:00+05:30',       // Muhurat date & time
   groomInfo: {
     photo: './assets/photos/people/groom.png',
     // photo: 'assets/people/groom.jpg',
-    grandparents: 'कै.बाजीराव यादव यांचा नातू',
+    grandparents: 'कै.बाजीराव धोंडिबा यादव यांचा नातू',
     parents: 'कै. राजेंद्र बाजीराव यादव यांचे सुपुत्र',
     education: 'बी.ई. (संगणक अभियांत्रिकी)',
     profession: 'मुंबई पोलीस, मुंबई',
@@ -20,8 +20,8 @@ export const WEDDING = {
   },
   brideInfo: {
     photo: './assets/photos/people/bride.png',
-    grandparents: 'कै. **** तळेकर यांची नात',
-    parents: 'श्री. राजेंद्र तळेकर यांची कन्या',
+    grandparents: 'कै. एकनाथ तळेकर यांची नात',
+    parents: 'श्री. राजेंद्र एकनाथ तळेकर यांची कन्या',
     education: 'एम.कॉम.',
     profession: 'चार्टर्ड अकाउंटंट, पुणे',
     about: 'हसतमुख, जिद्दी आणि कलाप्रेमी. चित्रकला, नृत्य आणि वाचनाची आवड.',
@@ -35,7 +35,7 @@ export const WEDDING = {
   rsvpWhatsApp: '917821051801',              // country code + number, no +
   contactPeople: [
     { name: 'कु. गोविंद राजेंद्र तळेकर.', phone: '7821051801' },
-    { name: 'श्री. राजेंद्र तळेकर.', phone: '9870199268' },
+    { name: 'श्री. राजेंद्र एकनाथ तळेकर.', phone: '9870199268' },
   ],
   events: [
     { name: 'उटणे कार्यक्रम', en: 'Utane', when: '२७ फेब्रुवारी, सायं ६:००' },
