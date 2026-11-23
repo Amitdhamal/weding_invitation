@@ -46,6 +46,6 @@ export const WEDDING = {
   // Put photos in src/assets/photos and videos in src/assets/videos, then list them here.
   feather: 'assets/feather.png',   // your peacock feather image (see src/assets/README.txt)
   heroImage: '', // Optional separate hero background; do not use a gallery photo.
-  photos: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7sVnS3S3mSfHRE3KWhOhJG34CE-zKRxga7QKTI4dUg&s=10','https://cdn0.weddingwire.in/article/3543/3_2/1280/jpg/43453-new-generation-wedding-video-gautam-khullar-photography-lead.jpeg'] as string[],
-  videos: ['assets/videos/wedding.mp4'] as string[],
+  photos: ['./assets/photos/engagement_1.jpeg', './assets/photos/engagement_2.jpeg'] as string[],
+  videos: [] as string[],
 };
