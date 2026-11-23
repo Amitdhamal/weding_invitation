@@ -7,7 +7,7 @@ export const WEDDING = {
   brideEn: 'Tanuja',
   groomParents: 'कै. राजेंद्र बाजीराव यादव',
   brideParents: 'श्री. राजेंद्र तळेकर',
-  date: '2027-02-28T18:19:00+05:30',       // Muhurat date & time
+  date: '2027-02-28T16:26:00+05:30',       // Muhurat date & time
   groomInfo: {
     photo: '',
     // photo: 'assets/people/groom.jpg',
@@ -40,12 +40,12 @@ export const WEDDING = {
     { name: 'सुपारी साखरपुडा', en: 'Engagement', when: '२८ फेब्रुवारी, सकाळी ११:३६' },
     { name: 'हळदी समारंभ', en: 'Haldi ceremony', when: '२८ फेब्रुवारी, सकाळी ९:००' },
     { name: 'स्नेहभोजन', en: 'Bhojan Samarambha', when: '२८ फेब्रुवारी, दुपारी २ ते सायं ८' },
-    { name: 'लग्न', en: 'Muhurat', when: '२८ फेब्रुवारी, ११:३६' },
+    { name: 'लग्न', en: 'Muhurat', when: '२८ फेब्रुवारी, सायं ४:२६' },
     // { name: 'स्वागत समारंभ', en: 'Reception', when: '१४ फेब्रुवारी, सायं ७:००' },
   ],
   // Put photos in src/assets/photos and videos in src/assets/videos, then list them here.
   feather: 'assets/feather.png',   // your peacock feather image (see src/assets/README.txt)
   heroImage: '', // Optional separate hero background; do not use a gallery photo.
   photos: ['./assets/photos/engagement_1.jpeg', './assets/photos/engagement_2.jpeg'] as string[],
-  videos: [] as string[],
+  videos: ['./assets/videos/engagement_1_vid_1.mp4'] as string[],
 };
