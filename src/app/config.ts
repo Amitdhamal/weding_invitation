@@ -16,6 +16,7 @@ export const WEDDING = {
     education: 'बी.ई. (संगणक अभियांत्रिकी)',
     profession: 'मुंबई पोलीस, मुंबई',
     about: 'शांत, मनमिळावू आणि कुटुंबवत्सल. प्रवास, क्रिकेट आणि संगीताची आवड.',
+    address: 'मु. केसुर्डी, पो. नायगाव, ता. खंडाळा, जि. सातारा.',
   },
   brideInfo: {
     photo: '',
@@ -24,10 +25,11 @@ export const WEDDING = {
     education: 'एम.कॉम.',
     profession: 'चार्टर्ड अकाउंटंट, पुणे',
     about: 'हसतमुख, जिद्दी आणि कलाप्रेमी. चित्रकला, नृत्य आणि वाचनाची आवड.',
+    address: 'मु. पो. विंग, ता. खंडाळा, जि. सातारा.',
   },
   credit: { text: 'by', name: 'GuruWebs Designers', url: 'https://guruwebs.netlify.app/' },  // add a website link in url to make the name clickable
   venue: 'विराज मल्टीपर्पज हॉल',
-  address: 'पारगांव खंडाळा ,सातारा',
+  address: 'मु. पो. पारगांव , तालुका खंडाळा , जिल्हा सातारा . बेंगलोर हायवे शेजारी',
   mapLink: 'https://maps.app.goo.gl/CyTvsHJmjzoB4vmM9',  // paste your Google Maps link
   liveStreamUrl: '', // Optional YouTube video/live URL (watch, live, youtu.be, or embed); blank shows a placeholder.
   rsvpWhatsApp: '917821051801',              // country code + number, no +
