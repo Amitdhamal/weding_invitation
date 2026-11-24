@@ -29,25 +29,25 @@
   opacity: .8;
 }
 
-.credit b,
-.credit a {
-  color: var(--maroon);
+.credit-button {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 8px 14px;
+  border: 0;
+  font-size: 16px !important;
+  border-radius: 999px;
+  background: var(--maroon);
+  font: inherit;
   font-weight: 600;
+  color: #fff;
   text-decoration: none;
-  // animation: blink 1.2s ease-in-out infinite;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #7a1020;
 }
 
-@keyframes blink {
-  50% {
-    opacity: .35;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .credit b,
-  .credit a {
-    animation: none;
-  }
+.credit a.credit-button:focus-visible {
+  outline: 3px solid var(--saffron);
+  outline-offset: 3px;
 }
 
 @media (max-width: 600px) {

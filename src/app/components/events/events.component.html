@@ -2,7 +2,7 @@
 <ol>
   @for (e of w.events; track e.en) {
     <li>
-      <div class="card">
+      <div class="card" [class.lagna-card]="e.name === '✦ लग्न ✦'">
         <h3>{{ e.name }}</h3>
         <small>{{ e.en }}</small>
         <p>{{ toDevanagari(e.when) }}</p>

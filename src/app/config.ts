@@ -27,7 +27,7 @@ export const WEDDING = {
     about: 'हसतमुख, जिद्दी आणि कलाप्रेमी. चित्रकला, नृत्य आणि वाचनाची आवड.',
     address: 'मु. पो. विंग, ता. खंडाळा, जि. सातारा.',
   },
-  credit: { text: 'by', name: 'GuruWebs Designers', url: 'https://guruwebs.netlify.app/' },  // add a website link in url to make the name clickable
+  credit: { text: '© All rights reserved.', name: 'GuruWebs', url: 'https://guruwebs.netlify.app/' },  // add a website link in url to make the name clickable
   venue: 'विराज मल्टीपर्पज हॉल',
   address: 'मु. पो. पारगांव , तालुका खंडाळा , जिल्हा सातारा . बेंगलोर हायवे शेजारी',
   mapLink: 'https://maps.app.goo.gl/CyTvsHJmjzoB4vmM9',  // paste your Google Maps link
@@ -42,7 +42,7 @@ export const WEDDING = {
     { name: 'सुपारी साखरपुडा', en: 'Engagement', when: '२८ फेब्रुवारी, सकाळी ११:००' },
     { name: 'हळदी समारंभ', en: 'Haldi ceremony', when: '२८ फेब्रुवारी, दुपारी १:००' },
     { name: 'स्नेहभोजन', en: 'Bhojan Samarambha', when: '२८ फेब्रुवारी, दुपारी २ ते सायं ८' },
-    { name: 'लग्न', en: 'Muhurat', when: '२८ फेब्रुवारी, सायं ४:२६' },
+    { name: '✦ लग्न ✦', en: 'Muhurat', when: '२८ फेब्रुवारी, सायं ४:२६' },
     // { name: 'स्वागत समारंभ', en: 'Reception', when: '१४ फेब्रुवारी, सायं ७:००' },
   ],
   // Put photos in src/assets/photos and videos in src/assets/videos, then list them here.

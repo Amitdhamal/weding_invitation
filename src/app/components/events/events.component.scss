@@ -49,6 +49,13 @@ li::before {
   box-shadow: 5px 0 12px #3a1d1218;
 }
 
+.card.lagna-card {
+  background: #7a1020;
+  border-color: #7a1020;
+  border-left-color: #c99a2e;
+  box-shadow: 5px 0 16px #7a102033;
+}
+
 h3 {
   color: var(--maroon);
   font-size: 1.4rem;
@@ -60,6 +67,16 @@ small {
 
 .card p {
   font-family: 'Tiro Devanagari Marathi', serif;
+}
+
+.lagna-card h3,
+.lagna-card p {
+  color: #fff8ee;
+}
+
+.lagna-card small {
+  color: #f2d58a;
+  opacity: 1;
 }
 
 .food-note {
