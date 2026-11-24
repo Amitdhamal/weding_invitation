@@ -27,12 +27,12 @@ export const WEDDING = {
     about: 'हसतमुख, जिद्दी आणि कलाप्रेमी. चित्रकला, नृत्य आणि वाचनाची आवड.',
     address: 'मु. पो. विंग, ता. खंडाळा, जि. सातारा.',
   },
-  credit: { text: '© All rights reserved.', name: 'GuruWebs', url: 'https://guruwebs.netlify.app/' },  // add a website link in url to make the name clickable
+  credit: { text: `© ${new Date().getFullYear()} All rights reserved.`, name: 'GuruWebs', url: 'https://guruwebs.netlify.app/' },  // add a website link in url to make the name clickable
   venue: 'विराज मल्टीपर्पज हॉल',
   address: 'मु. पो. पारगांव , तालुका खंडाळा , जिल्हा सातारा . बेंगलोर हायवे शेजारी',
   mapLink: 'https://maps.app.goo.gl/CyTvsHJmjzoB4vmM9',  // paste your Google Maps link
   liveStreamUrl: '', // Optional YouTube video/live URL (watch, live, youtu.be, or embed); blank shows a placeholder.
-  rsvpWhatsApp: '917821051801',              // country code + number, no +
+  rsvpWhatsApp: '918379993629',              // country code + number, no +
   contactPeople: [
     { name: 'कु. गोविंद राजेंद्र तळेकर.', phone: '7709325269' },
     { name: 'श्री. राजेंद्र एकनाथ तळेकर.', phone: '8379993629' },

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, inject } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { WEDDING } from '../../config';
 import { SectionTitleComponent } from '../section-title/section-title.component';
@@ -46,7 +46,7 @@ function getYouTubeVideoId(value: string): string | null {
   templateUrl: './live-stream.component.html',
   styleUrls: ['./live-stream.component.scss'],
 })
-export class LiveStreamComponent implements OnDestroy {
+export class LiveStreamComponent implements OnInit, OnDestroy {
   private readonly sanitizer = inject(DomSanitizer);
   isAdminMode = typeof window !== 'undefined' && window.location.hash === '#admin22051991';
   streamInput = WEDDING.liveStreamUrl;
@@ -56,6 +56,7 @@ export class LiveStreamComponent implements OnDestroy {
   akshata: AkshataParticle[] = [];
   private burstSequence = 0;
   private burstTimer?: ReturnType<typeof setTimeout>;
+  private statusTimer?: ReturnType<typeof setInterval>;
   public w = WEDDING;
   blankYoutubeUrlMsg = `लाइव्ह स्ट्रीमची लिंक विवाह शुभमुहुर्ताच्या काही मिनिटे आधी जोडली जाईल. <br> अक्षता बटन लाइव्ह स्ट्रीम चालू झाल्यावरच कार्यरत होईल.`;
 
@@ -63,6 +64,11 @@ export class LiveStreamComponent implements OnDestroy {
     const localStreamUrl = this.readLocalStreamUrl();
     this.streamInput = localStreamUrl ?? WEDDING.liveStreamUrl;
     this.setStreamUrl(this.streamInput);
+  }
+
+  ngOnInit() {
+    this.updateBlankMessage();
+    this.statusTimer = setInterval(() => this.updateBlankMessage(), 30_000);
   }
 
   saveStreamUrl(value: string) {
@@ -100,6 +106,8 @@ export class LiveStreamComponent implements OnDestroy {
   }
 
   throwAkshata() {
+    if (!this.streamUrl) return;
+
     const burst = ++this.burstSequence;
     this.akshata = Array.from({ length: 32 }, (_, index) => ({
       id: burst * 32 + index,
@@ -118,6 +126,7 @@ export class LiveStreamComponent implements OnDestroy {
 
   ngOnDestroy() {
     if (this.burstTimer !== undefined) clearTimeout(this.burstTimer);
+    if (this.statusTimer !== undefined) clearInterval(this.statusTimer);
   }
 
   private readLocalStreamUrl(): string | null {
@@ -140,5 +149,13 @@ export class LiveStreamComponent implements OnDestroy {
           `https://www.youtube-nocookie.com/embed/${videoId}?rel=0`,
         )
       : null;
+    this.updateBlankMessage();
+  }
+
+  private updateBlankMessage() {
+    const weddingEndTime = new Date(WEDDING.date).getTime() + 60 * 60 * 1000;
+    this.blankYoutubeUrlMsg = Date.now() >= weddingEndTime
+      ? 'Live वर आल्याबद्दल धन्यवाद.'
+      : `लाइव्ह स्ट्रीमची लिंक विवाह शुभमुहुर्ताच्या काही मिनिटे आधी जोडली जाईल. <br> अक्षता बटन लाइव्ह स्ट्रीम चालू झाल्यावरच कार्यरत होईल.`;
   }
 }
