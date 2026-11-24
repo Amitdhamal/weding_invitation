@@ -209,7 +209,7 @@ small {
   .scroll-down {
     position: absolute;
     left: 50%;
-    bottom: max(18px, env(safe-area-inset-bottom));
+    bottom: max(60px, env(safe-area-inset-bottom));
     z-index: 3;
     display: flex;
     flex-direction: column;
