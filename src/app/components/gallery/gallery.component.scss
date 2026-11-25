@@ -58,12 +58,17 @@ app-section-title {
   overflow: hidden;
   border: 1px solid #d6aa59;
   border-radius: 4px 8px 2px 2px;
+  background: linear-gradient(90deg, #511321, #8b2937 18%, #741b2a 78%, #4f1422);
   color: #fff3d4;
   cursor: pointer;
   box-shadow: 0 3px 7px #24140f80, inset 7px 0 8px #ffffff18;
   transform: rotate(-4deg);
   transform-origin: bottom center;
   transition: transform 180ms ease, filter 180ms ease, box-shadow 180ms ease;
+}
+
+.story-book:nth-child(even) {
+ background:linear-gradient( 90deg, #53361f, #e5932c 18%, #80502f 78%, #4a2d1d);
 }
 
 .story-book:hover {
@@ -81,14 +86,6 @@ app-section-title {
 .story-book + .story-book:hover {
   z-index: 1;
   transform: translateZ(18px) translateY(-5px) rotate(-2deg) scale(1.04);
-}
-
-.engagement-book {
-  background: linear-gradient(90deg, #511321, #8b2937 18%, #741b2a 78%, #4f1422);
-}
-
-.prewedding-book {
-  background: linear-gradient(90deg, #53361f, #a66a3d 18%, #80502f 78%, #4a2d1d);
 }
 
 .spine-face {

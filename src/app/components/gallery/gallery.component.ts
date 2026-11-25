@@ -5,7 +5,6 @@ import { SectionTitleComponent } from '../section-title/section-title.component'
 
 type GalleryMedia = { src: string; type: 'image' | 'video' };
 type GalleryAlbum = {
-  id: string;
   title: string;
   subtitle: string;
   media: GalleryMedia[];
@@ -19,7 +18,6 @@ type GalleryAlbum = {
 export class GalleryComponent {
   w = WEDDING;
   albums: GalleryAlbum[] = WEDDING.albums.map(album => ({
-    id: album.id,
     title: album.title,
     subtitle: album.subtitle,
     media: [

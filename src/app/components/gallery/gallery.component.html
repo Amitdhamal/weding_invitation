@@ -3,9 +3,8 @@
 @if (!selectedAlbum) {
   <section class="bookshelf" aria-label="आमच्या आठवणींचे फोटोबुक निवडा">
     <div class="shelf-row">
-      @for (album of albums; track album.id) {
-        <button class="story-book" [class.engagement-book]="album.id === 'engagement'"
-          [class.prewedding-book]="album.id === 'prewedding'" type="button"
+      @for (album of albums; track album.title) {
+        <button class="story-book" type="button"
           (click)="selectAlbum(album)" [attr.aria-label]="album.title + ' फोटोबुक उघडा'">
           <span class="spine-face">
             <span class="spine-label">
@@ -16,7 +15,7 @@
       }
     </div>
   </section>
-  <p class="shelf-hint">आठवणी पाहण्यासाठी पुस्तक निवडा</p>
+  <p class="shelf-hint"><b>आठवणी पाहण्यासाठी पुस्तक निवडा</b></p>
 } @else {
   <button class="shelf-back" type="button" [disabled]="isOpening || flipDirection !== 0"
     (click)="returnToShelf()">← पुस्तकांच्या कपाटात परत</button>

@@ -50,16 +50,20 @@ export const WEDDING = {
   heroImage: '', // Optional separate hero background; do not use a gallery photo.
   albums: [
     {
-      id: 'engagement',
-      title: 'साखरपुडा',
-      subtitle: 'Engagement',
+      title: 'कुंकू कार्यक्रम',
+      subtitle: 'Kunku ceremony',
       photos: ['./assets/photos/engagement_1.jpeg', './assets/photos/engagement_2.jpeg'],
       videos: ['./assets/videos/engagement_1_vid_1.mp4'],
     },
     {
-      id: 'prewedding',
       title: 'प्री-वेडिंग शूट',
       subtitle: 'Pre-wedding shoot',
+      photos: [],
+      videos: [],
+    },
+    {
+      title: 'घाणा कार्यक्रम',
+      subtitle: 'bangles ceremony',
       photos: [],
       videos: [],
     },
