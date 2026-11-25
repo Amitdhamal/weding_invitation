@@ -7,6 +7,7 @@ type GalleryMedia = { src: string; type: 'image' | 'video' };
 type GalleryAlbum = {
   title: string;
   subtitle: string;
+  isNewasset: boolean;
   media: GalleryMedia[];
 };
 
@@ -20,6 +21,7 @@ export class GalleryComponent {
   albums: GalleryAlbum[] = WEDDING.albums.map(album => ({
     title: album.title,
     subtitle: album.subtitle,
+    isNewasset: 'isNewasset' in album && album.isNewasset === true,
     media: [
       ...album.photos.map(src => ({ src, type: 'image' as const })),
       ...album.videos.map(src => ({ src, type: 'video' as const })),

@@ -54,18 +54,28 @@ export const WEDDING = {
       subtitle: 'Kunku ceremony',
       photos: ['./assets/photos/engagement_1.jpeg', './assets/photos/engagement_2.jpeg'],
       videos: ['./assets/videos/engagement_1_vid_1.mp4'],
+      isNewasset: true,  // optional; shows a "New" badge on the book
     },
     {
       title: 'प्री-वेडिंग शूट',
       subtitle: 'Pre-wedding shoot',
       photos: [],
       videos: [],
+      isNewasset: true,
     },
     {
       title: 'घाणा कार्यक्रम',
-      subtitle: 'bangles ceremony',
+      subtitle: 'Bangles ceremony',
       photos: [],
       videos: [],
+      isNewasset: true,
+    },
+    {
+      title: 'केळवण (गडंगणेर)',
+      subtitle: 'Pre-wedding feast',
+      photos: [],
+      videos: [],
+      isNewasset: true,
     },
   ],
 };

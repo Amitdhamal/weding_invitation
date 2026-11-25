@@ -5,8 +5,12 @@
     <div class="shelf-row">
       @for (album of albums; track album.title) {
         <button class="story-book" type="button"
-          (click)="selectAlbum(album)" [attr.aria-label]="album.title + ' फोटोबुक उघडा'">
+          (click)="selectAlbum(album)"
+          [attr.aria-label]="album.title + ' फोटोबुक उघडा' + (album.isNewasset ? ', नवीन' : '')">
           <span class="spine-face">
+            @if (album.isNewasset) {
+              <span class="new-badge">नवीन</span>
+            }
             <span class="spine-label">
               <span class="spine-title">{{ album.title }}</span>
             </span>
