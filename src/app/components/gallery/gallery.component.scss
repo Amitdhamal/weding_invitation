@@ -11,14 +11,16 @@ app-section-title {
 }
 
 .bookshelf {
-  max-width: 500px;
+  width: min(calc(100% - 40px), 980px);
   margin: 0 auto;
   padding: 12px 14px 18px;
-  border: 12px solid #70432e;
+  border: 12px solid transparent;
   border-bottom-width: 18px;
   background:
-    repeating-linear-gradient(92deg, #ffffff08 0 2px, #00000008 2px 3px, transparent 3px 18px),
-    linear-gradient(135deg, #69432e 0%, #956a48 38%, #70452e 68%, #9a704e 100%);
+    repeating-linear-gradient(90deg, #ffffff0a 0 2px, #00000012 2px 3px, transparent 3px 13px) padding-box,
+    linear-gradient(135deg, #69432e 0%, #956a48 38%, #70452e 68%, #9a704e 100%) padding-box,
+    repeating-linear-gradient(90deg, #2f1b1126 0 2px, transparent 2px 8px, #edc99b16 8px 9px, transparent 9px 20px) border-box,
+    linear-gradient(90deg, #573522, #916243 18%, #68402b 42%, #a1744f 66%, #68402b 84%, #4f2f20) border-box;
   box-shadow: 0 14px 24px #3a1d1233, inset 0 0 0 2px #c28d5d;
 }
 
@@ -33,7 +35,8 @@ app-section-title {
   padding: 18px 10px 0;
   border-bottom: 14px solid #8b5a3b;
   background:
-    repeating-linear-gradient(91deg, #ffffff08 0 2px, #00000008 2px 3px, transparent 3px 22px),
+    repeating-linear-gradient(90deg, #39241930 0 2px, transparent 2px 12px, #e6c0951a 12px 14px, transparent 14px 28px),
+    repeating-linear-gradient(90deg, transparent 0 54px, #452b1d24 55px 58px, transparent 59px 86px),
     linear-gradient(110deg, #81583d, #a27650 42%, #70472f 75%, #936746);
   box-shadow: 0 8px 10px #3a1d1252;
 }
@@ -513,7 +516,7 @@ app-section-title {
   }
 
   .bookshelf {
-    width: min(calc(100% - 20px), 250px);
+    width: calc(100% - 32px);
     margin-inline: auto;
     padding: 8px 4px 12px;
     border-width: 6px;
@@ -521,16 +524,15 @@ app-section-title {
   }
 
   .shelf-row {
-    justify-content: start !important;
     height: clamp(250px, 70vw, 290px);
     gap: 0;
-    padding: 12px 4px 0;
+    padding: 12px 12px 0;
     border-bottom-width: 10px;
   }
 
   .story-book {
     width: calc((100% - 10px) / 2);
-    max-width: 60px;
+    max-width: 40px;
   }
 
   .spine-face {
@@ -543,7 +545,7 @@ app-section-title {
   }
 
   .spine-title {
-    font-size: clamp(1rem, 3.8vw, 1.2rem);
+    font-size: clamp(0rem, 3.8vw, 1.2rem);
   }
 
   .book {
@@ -551,7 +553,7 @@ app-section-title {
   }
 
   .book.closed {
-    width: min(100%, 340px);
+    width: min(100%, 230px);
   }
 
   .book.opening {
