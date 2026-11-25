@@ -45,9 +45,23 @@ export const WEDDING = {
     { name: '✦ लग्न ✦', en: 'Muhurat', when: '२८ फेब्रुवारी, सायं ४:२६' },
     // { name: 'स्वागत समारंभ', en: 'Reception', when: '१४ फेब्रुवारी, सायं ७:००' },
   ],
-  // Put photos in src/assets/photos and videos in src/assets/videos, then list them here.
+  // Add photos and videos to the matching story book below.
   feather: 'assets/feather.png',   // your peacock feather image (see src/assets/README.txt)
   heroImage: '', // Optional separate hero background; do not use a gallery photo.
-  photos: ['./assets/photos/engagement_1.jpeg', './assets/photos/engagement_2.jpeg'] as string[],
-  videos: ['./assets/videos/engagement_1_vid_1.mp4'] as string[],
+  albums: [
+    {
+      id: 'engagement',
+      title: 'साखरपुडा',
+      subtitle: 'Engagement',
+      photos: ['./assets/photos/engagement_1.jpeg', './assets/photos/engagement_2.jpeg'],
+      videos: ['./assets/videos/engagement_1_vid_1.mp4'],
+    },
+    {
+      id: 'prewedding',
+      title: 'प्री-वेडिंग शूट',
+      subtitle: 'Pre-wedding shoot',
+      photos: [],
+      videos: [],
+    },
+  ],
 };

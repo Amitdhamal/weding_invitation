@@ -4,6 +4,12 @@ import { WEDDING } from '../../config';
 import { SectionTitleComponent } from '../section-title/section-title.component';
 
 type GalleryMedia = { src: string; type: 'image' | 'video' };
+type GalleryAlbum = {
+  id: string;
+  title: string;
+  subtitle: string;
+  media: GalleryMedia[];
+};
 
 @Component({
   selector: 'app-gallery', standalone: true, imports: [SectionTitleComponent, NgTemplateOutlet],
@@ -12,10 +18,16 @@ type GalleryMedia = { src: string; type: 'image' | 'video' };
 })
 export class GalleryComponent {
   w = WEDDING;
-  media: GalleryMedia[] = [
-    ...WEDDING.photos.map(src => ({ src, type: 'image' as const })),
-    ...WEDDING.videos.map(src => ({ src, type: 'video' as const })),
-  ];
+  albums: GalleryAlbum[] = WEDDING.albums.map(album => ({
+    id: album.id,
+    title: album.title,
+    subtitle: album.subtitle,
+    media: [
+      ...album.photos.map(src => ({ src, type: 'image' as const })),
+      ...album.videos.map(src => ({ src, type: 'video' as const })),
+    ],
+  }));
+  selectedAlbum: GalleryAlbum | null = null;
   selectedMedia: GalleryMedia | null = null;
   isOpen = false;
   isOpening = false;
@@ -25,6 +37,10 @@ export class GalleryComponent {
   private flipTimer?: ReturnType<typeof setTimeout>;
   private openingTimer?: ReturnType<typeof setTimeout>;
   private returnFocus?: HTMLButtonElement;
+
+  get media(): GalleryMedia[] {
+    return this.selectedAlbum?.media ?? [];
+  }
 
   get currentMedia(): GalleryMedia {
     return this.media[this.currentIndex];
@@ -65,6 +81,19 @@ export class GalleryComponent {
       : this.flipDirection === -1
         ? this.flipTargetIndex
         : this.currentIndex;
+  }
+
+  selectAlbum(album: GalleryAlbum) {
+    this.selectedAlbum = album;
+    this.currentIndex = 0;
+  }
+
+  returnToShelf() {
+    if (this.openingTimer !== undefined) clearTimeout(this.openingTimer);
+    this.openingTimer = undefined;
+    this.isOpening = false;
+    this.isOpen = false;
+    this.selectedAlbum = null;
   }
 
   openAlbum() {
