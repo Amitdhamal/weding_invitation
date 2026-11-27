@@ -4,12 +4,12 @@
   <section class="bookshelf" aria-label="आमच्या आठवणींचे फोटोबुक निवडा">
     <div class="shelf-row">
       @for (album of albums; track album.title) {
-        <button class="story-book" type="button"
+        <button class="story-book" [class.amber-cover]="album.coverTone === 'amber'" type="button"
           (click)="selectAlbum(album)"
           [attr.aria-label]="album.title + ' फोटोबुक उघडा' + (album.isNewasset ? ', नवीन' : '')">
           <span class="spine-face">
             @if (album.isNewasset) {
-              <span class="new-badge">नवीन पुस्तक</span>
+              <span class="new-badge">नवीन आठवणी</span>
             }
             <span class="spine-label">
               <span class="spine-title">{{ album.title }}</span>
@@ -97,7 +97,8 @@
       }
 
       @if (!isOpen) {
-        <button class="closed-cover" [class.opening]="isOpening" type="button"
+        <button class="closed-cover" [class.opening]="isOpening"
+          [class.amber-cover]="selectedAlbum.coverTone === 'amber'" type="button"
           [disabled]="isOpening" (click)="openAlbum()" (animationend)="finishOpening()"
           [attr.aria-hidden]="isOpening ? 'true' : null" aria-label="फोटोबुक उघडा">
           <span class="cover-kicker">{{ w.bride }} आणि {{ w.groom }}</span>
@@ -115,6 +116,9 @@
       </button>
     }
   </div>
+  @if (isOpen) {
+    <p class="media-hint">फोटो मोठा करण्यासाठी फोटोवर स्पर्श करा</p>
+  }
 } @else {
   <p class="empty-message">{{ selectedAlbum.title }}च्या आठवणी लवकरच जोडल्या जातील.</p>
 }

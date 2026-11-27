@@ -59,7 +59,7 @@ export const WEDDING = {
     {
       title: 'प्री-वेडिंग शूट',
       subtitle: 'Pre-wedding shoot',
-      photos: [],
+      photos: ['./assets/photos/engagement_1.jpeg', './assets/photos/engagement_2.jpeg'],
       videos: [],
       isNewasset: false,
     },

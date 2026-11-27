@@ -67,8 +67,8 @@ app-section-title {
   transition: transform 180ms ease, filter 180ms ease, box-shadow 180ms ease;
 }
 
-.story-book:nth-child(even) {
- background:linear-gradient( 90deg, #53361f, #e5932c 18%, #80502f 78%, #4a2d1d);
+.story-book.amber-cover {
+  background: linear-gradient(90deg, #53361f, #e5932c 18%, #80502f 78%, #4a2d1d);
 }
 
 .story-book:hover {
@@ -218,6 +218,11 @@ app-section-title {
   color: #fff3d4;
   cursor: pointer;
   box-shadow: inset 12px 0 18px #3b071c66, inset 0 0 0 8px #701827, inset 0 0 0 10px #d6aa5966;
+}
+
+.closed-cover.amber-cover {
+  background: radial-gradient(ellipse at 50% 45%, #e5932c 0, #80502f 54%, #4a2d1d 100%);
+  box-shadow: inset 12px 0 18px #3b271c66, inset 0 0 0 8px #53361f, inset 0 0 0 10px #d6aa5966;
 }
 
 .closed-cover.opening {
@@ -460,6 +465,13 @@ app-section-title {
   margin: 0;
   padding: 20px;
   color: #8c5944;
+  text-align: center;
+}
+
+.media-hint {
+  margin: 14px 0 0;
+  color: #8c5944;
+  font-size: 0.9rem;
   text-align: center;
 }
 
