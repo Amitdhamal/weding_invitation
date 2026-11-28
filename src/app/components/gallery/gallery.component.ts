@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener} from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
 import { WEDDING } from '../../config';
 import { SectionTitleComponent } from '../section-title/section-title.component';
@@ -87,7 +87,9 @@ export class GalleryComponent {
 
   selectAlbum(album: GalleryAlbum) {
     this.selectedAlbum = album;
+    console.log('Selected album:', album);
     this.currentIndex = 0;
+    this.scrollToGallery();
   }
 
   returnToShelf() {
@@ -96,6 +98,11 @@ export class GalleryComponent {
     this.isOpening = false;
     this.isOpen = false;
     this.selectedAlbum = null;
+    this.scrollToGallery();
+  }
+
+  private scrollToGallery() {
+    document.getElementById('gallery-shelf')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   openAlbum() {
