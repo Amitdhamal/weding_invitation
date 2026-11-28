@@ -71,8 +71,15 @@ export const WEDDING = {
       isNewasset: false,
     },
     {
-      title: 'घाणा कार्यक्रम',
+      title: 'घाणा व मुहूर्तवेढ',
       subtitle: 'Bangles ceremony',
+      photos: [],
+      videos: [],
+      isNewasset: false,
+    },
+    {
+      title: 'मेहंदी',
+      subtitle: 'Mehndi ceremony',
       photos: [],
       videos: [],
       isNewasset: false,
