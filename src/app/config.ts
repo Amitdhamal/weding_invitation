@@ -63,19 +63,19 @@ export const WEDDING = {
       videos: [],
       isNewasset: false,
     },
-    {
-      title: 'घाणा कार्यक्रम',
-      subtitle: 'Bangles ceremony',
-      photos: [],
-      videos: [],
-      isNewasset: false,
-    },
-    {
+     {
       title: 'केळवण',
       subtitle: 'Pre-wedding feast',
       photos: [],
       videos: [],
       isNewasset: false,
     },
+    {
+      title: 'घाणा कार्यक्रम',
+      subtitle: 'Bangles ceremony',
+      photos: [],
+      videos: [],
+      isNewasset: false,
+    }
   ],
 };
