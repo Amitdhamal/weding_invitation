@@ -52,14 +52,14 @@ export const WEDDING = {
     {
       title: 'कुंकू कार्यक्रम',
       subtitle: 'Kunku ceremony',
-      photos: ['./assets/photos/engagement_1.jpeg', './assets/photos/engagement_2.jpeg'],
+      photos: ['./assets/photos/Kun_1.jpeg', './assets/photos/Kun_2.jpeg', './assets/photos/Kun_3.jpeg', './assets/photos/Kun_4.jpeg', './assets/photos/Kun_5.jpeg', './assets/photos/Kun_6.jpeg', './assets/photos/Kun_7.jpeg', './assets/photos/Kun_8.jpeg', './assets/photos/Kun_9.jpeg', './assets/photos/Kun_10.jpeg'],
       videos: ['./assets/videos/engagement_1_vid_1.mp4'],
       isNewasset: true,  // optional; shows a "New" badge on the book
     },
     {
       title: 'प्री-वेडिंग शूट',
       subtitle: 'Pre-wedding shoot',
-      photos: ['./assets/photos/engagement_1.jpeg', './assets/photos/engagement_2.jpeg'],
+      photos: [],
       videos: [],
       isNewasset: false,
     },
