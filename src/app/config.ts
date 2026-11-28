@@ -71,7 +71,7 @@ export const WEDDING = {
       isNewasset: false,
     },
     {
-      title: 'केळवण (गडंगणेर)',
+      title: 'केळवण',
       subtitle: 'Pre-wedding feast',
       photos: [],
       videos: [],
